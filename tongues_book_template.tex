@@ -1,0 +1,228 @@
+\documentclass[10pt,oneside,openany]{book}
+
+% ============================================
+% FONT
+% ============================================
+\usepackage{fontspec}
+\setmainfont{Iosevka Slab Extended}
+\setmonofont{Iosevka Term Extended}[Scale=MatchLowercase]
+
+% ============================================
+% GEOMETRY - KDP 7x10 no bleed
+% ============================================
+\usepackage[
+  paperwidth=7.0in,
+  paperheight=10.0in,
+  inner=0.75in,
+  outer=0.6in,
+  top=0.6in,
+  bottom=0.6in,
+  headheight=0pt,
+  headsep=0pt,
+  footskip=0pt
+]{geometry}
+
+\pagestyle{empty}
+
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage[off]{crop}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{xcolor}
+\usepackage[nopagecolor=white]{pagecolor}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{tikz}
+
+\setlength{\parskip}{1.8em}
+\setlength{\parindent}{0pt}
+
+% ============================================
+% PLATE STYLES
+% py injects: \platestyle{IMGPATH}{CAPTION}
+% ============================================
+
+% default: white bg, portrait
+\newcommand{\platedefault}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{white}\color{black}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{#1}%
+    \par\vspace{0.8em}%
+    \small #2%
+    \vspace*{\fill}%
+  \end{center}%
+  \restoregeometry\newpage%
+}
+
+% black bg: white text (for white-bordered images like polaroids)
+\newcommand{\plateblack}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{black}\color{white}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{#1}%
+    \par\vspace{1em}%
+    \small\textcolor{white}{#2}%
+    \vspace*{\fill}%
+  \end{center}%
+  \newpage\restoregeometry\pagecolor{white}\color{black}%
+}
+
+% rotated: landscape image rotated 90deg, white bg
+\newcommand{\platerotated}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{white}\color{black}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \rotatebox{90}{\includegraphics[width=0.80\textheight,height=0.95\textwidth,keepaspectratio]{#1}}%
+    \par\vspace{0.8em}%
+    \small #2\par%
+  \end{center}%
+  \newpage\restoregeometry%
+}
+
+% rotated + black bg
+\newcommand{\platerotatedblack}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{black}\color{white}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \rotatebox{90}{\includegraphics[width=0.80\textheight,height=0.95\textwidth,keepaspectratio]{#1}}%
+    \par\vspace{0.8em}%
+    \small\textcolor{white}{#2}\par%
+  \end{center}%
+  \newpage\restoregeometry\pagecolor{white}\color{black}%
+}
+
+% ============================================
+\begin{document}
+\pagecolor{white}
+\color{black}
+
+% ============================================
+% TITLE PAGE
+% ============================================
+\thispagestyle{empty}
+\raggedright
+  \vspace*{\fill}
+  \Huge\bfseries The Tongues Book \\
+  \vspace{0.8em}
+  \Large a parody \\
+  \vspace{0.5em}
+  \normalsize\itshape corpus delicti \\
+  \vspace{3em}
+  \large Joe ApocaLips \\
+  \vspace*{\fill}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[rotate=35, color=gray!40, font=\huge\bfseries\sffamily]
+    at (current page.center) {UNDER CONSTRUCTION};
+\end{tikzpicture}
+\newpage
+
+% ============================================
+% COPYRIGHT PAGE
+% ============================================
+\thispagestyle{empty}
+\raggedright
+\vspace*{\fill}
+  \small
+  \textcopyright{} Copyright March 2026 Joe ApocaLips, The Mass Factory. \\
+  \vspace{1em}
+  All rights reserved. No part of this publication may be reproduced,
+  distributed, or transmitted without prior written permission,
+  except for brief quotations in critical reviews. \\
+  \vspace{1em}
+  This is a work of parody. Any resemblance to actual tongues,
+  living or dead, is purely anatomical. \\
+  \vspace{1em}
+  Images and texts powered by Grok (xAI). ;) \\
+  \vspace{1em}
+  No page numbers — because who gives a fuck. \\
+  \vspace{2em}
+  First Edition. \\
+  \vspace{1em}
+  ISBN: 000-0-00-000000-0  coming soon...
+\newpage
+
+% ============================================
+% NOTICE
+% ============================================
+\thispagestyle{empty}
+\raggedright
+\vspace*{\fill}
+  {\huge\bfseries Notice} \\
+  \vspace{1.8em}
+
+  \small
+  This book is not \textit{The Tongue Machine}. \\
+  \vspace{0.3em}
+  \textit{The Tongue Machine} (published by Schism Press) is a serious work. It concerns language, pedagogy,
+  power, the slow catastrophe of education. Ansgar Allen wrote it.
+  You should read it. \\
+  \vspace{0.3em}
+  This book concerns tongues. \textbf{Only tongues.} \\
+  \vspace{0.3em}
+  Not the organ of language --- the organ itself. Wet. Extended.
+  Occasionally pierced. Photographed by strangers in bathrooms,
+  under fluorescent light, in front of mirrors, against neutral walls. \\
+  \vspace{0.3em}
+  Allen made a video. A gallery of tongues, filmed close. The tongue
+  as object. The tongue detached from speech, from meaning, from the
+  machine that runs on it. \\
+  \vspace{0.3em}
+  In February 2026, Ansgar Allen issued a call for tongues. Email a
+  photo. Full face or just the mouth. B\&W. Each to appear for a fraction
+  of a second. \\
+  \vspace{0.3em}
+  We did not email... \\
+  We took that literally. \\
+  \vspace{0.3em}
+  Each image in this book was generated by a machine. Parameters were
+  set --- pose, expression, framing, lighting, background, piercing,
+  artifact --- and sampled at random. The machine decided. Two hundred
+  times. No photographer. No subject. No session. A pipeline running
+  in the dark, producing tongues on demand. \\
+  \vspace{0.3em}
+  The tongue machine, then. But inverted: not the organ that produces
+  language, but a language --- a prompt --- that produces organs. \\
+  \vspace{0.8em}
+  Each image carries the residue of its own production. The AI model
+  brought its own biases --- aesthetic preferences, demographic defaults,
+  cultural assumptions baked into training data. It hallucinated where
+  it didn't know. It standardized where it should have varied.
+  The pipeline decided; the author selected. What remains is neither
+  documentary nor fiction --- it is the negotiated output of a machine
+  that never saw a tongue, and a process that never had a subject. \\
+  \vspace{0.8em}
+  Two hundred tongues. No meaning guaranteed. \\
+  \vspace{1.2em}
+  \textit{The Mass Factory, March 2026.}
+  \vspace*{\fill}
+\newpage
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+% ============================================
+% PLATES — generated by The-Tongues-Book.py --pdf
+% edit plate styles above, keep BEGIN/END markers
+% ============================================
+%%BEGIN_PLATE%%
+\%%STYLE%%{%%IMGPATH%%}{%%CAPTION%%}
+%%END_PLATE%%
+
+\end{document}

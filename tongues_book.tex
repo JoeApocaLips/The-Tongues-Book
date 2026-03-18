@@ -1,0 +1,783 @@
+\documentclass[10pt,oneside,openany]{book}
+
+% ============================================
+% FONT
+% ============================================
+\usepackage{fontspec}
+\setmainfont{Iosevka Slab Extended}
+\setmonofont{Iosevka Term Extended}[Scale=MatchLowercase]
+
+% ============================================
+% GEOMETRY - KDP 7x10 no bleed
+% ============================================
+\usepackage[
+  paperwidth=7.0in,
+  paperheight=10.0in,
+  inner=0.75in,
+  outer=0.6in,
+  top=0.6in,
+  bottom=0.6in,
+  headheight=0pt,
+  headsep=0pt,
+  footskip=0pt
+]{geometry}
+
+\pagestyle{empty}
+
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage[off]{crop}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{xcolor}
+\usepackage[nopagecolor=white]{pagecolor}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{tikz}
+
+\setlength{\parskip}{1.8em}
+\setlength{\parindent}{0pt}
+
+% ============================================
+% PLATE STYLES
+% py injects: \platestyle{IMGPATH}{CAPTION}
+% ============================================
+
+% default: white bg, portrait
+\newcommand{\platedefault}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{white}\color{black}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{#1}%
+    \par\vspace{0.8em}%
+    \small #2%
+    \vspace*{\fill}%
+  \end{center}%
+  \restoregeometry\newpage%
+}
+
+% black bg: white text (for white-bordered images like polaroids)
+\newcommand{\plateblack}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{black}\color{white}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \includegraphics[width=\textwidth,height=0.88\textheight,keepaspectratio]{#1}%
+    \par\vspace{1em}%
+    \small\textcolor{white}{#2}%
+    \vspace*{\fill}%
+  \end{center}%
+  \newpage\restoregeometry\pagecolor{white}\color{black}%
+}
+
+% rotated: landscape image rotated 90deg, white bg
+\newcommand{\platerotated}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{white}\color{black}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \rotatebox{90}{\includegraphics[width=0.80\textheight,height=0.95\textwidth,keepaspectratio]{#1}}%
+    \par\vspace{0.8em}%
+    \small #2\par%
+  \end{center}%
+  \newpage\restoregeometry%
+}
+
+% rotated + black bg
+\newcommand{\platerotatedblack}[2]{%
+  %
+  \newgeometry{inner=0.75in,outer=0.25in,top=0.25in,bottom=0.35in,headheight=0pt,headsep=0pt,footskip=0pt}%
+  \pagecolor{black}\color{white}%
+  \thispagestyle{empty}%
+  \begin{center}%
+    \vspace*{\fill}%
+    \rotatebox{90}{\includegraphics[width=0.80\textheight,height=0.95\textwidth,keepaspectratio]{#1}}%
+    \par\vspace{0.8em}%
+    \small\textcolor{white}{#2}\par%
+  \end{center}%
+  \newpage\restoregeometry\pagecolor{white}\color{black}%
+}
+
+% ============================================
+\begin{document}
+\pagecolor{white}
+\color{black}
+
+% ============================================
+% TITLE PAGE
+% ============================================
+\thispagestyle{empty}
+\raggedright
+  \vspace*{\fill}
+  \Huge\bfseries The Tongues Book \\
+  \vspace{0.8em}
+  \Large a parody \\
+  \vspace{0.5em}
+  \normalsize\itshape corpus delicti \\
+  \vspace{3em}
+  \large Joe ApocaLips \\
+  \vspace*{\fill}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[rotate=35, color=gray!40, font=\huge\bfseries\sffamily]
+    at (current page.center) {UNDER CONSTRUCTION};
+\end{tikzpicture}
+\newpage
+
+% ============================================
+% COPYRIGHT PAGE
+% ============================================
+\thispagestyle{empty}
+\raggedright
+\vspace*{\fill}
+  \small
+  \textcopyright{} Copyright March 2026 Joe ApocaLips, The Mass Factory. \\
+  \vspace{1em}
+  All rights reserved. No part of this publication may be reproduced,
+  distributed, or transmitted without prior written permission,
+  except for brief quotations in critical reviews. \\
+  \vspace{1em}
+  This is a work of parody. Any resemblance to actual tongues,
+  living or dead, is purely anatomical. \\
+  \vspace{1em}
+  Images and texts powered by Grok (xAI). ;) \\
+  \vspace{1em}
+  No page numbers — because who gives a fuck. \\
+  \vspace{2em}
+  First Edition. \\
+  \vspace{1em}
+  ISBN: 000-0-00-000000-0  coming soon...
+\newpage
+
+% ============================================
+% NOTICE
+% ============================================
+\thispagestyle{empty}
+\raggedright
+\vspace*{\fill}
+  {\huge\bfseries Notice} \\
+  \vspace{1.8em}
+
+  \small
+  This book is not \textit{The Tongue Machine}. \\
+  \vspace{0.3em}
+  \textit{The Tongue Machine} (published by Schism Press) is a serious work. It concerns language, pedagogy,
+  power, the slow catastrophe of education. Ansgar Allen wrote it.
+  You should read it. \\
+  \vspace{0.3em}
+  This book concerns tongues. \textbf{Only tongues.} \\
+  \vspace{0.3em}
+  Not the organ of language --- the organ itself. Wet. Extended.
+  Occasionally pierced. Photographed by strangers in bathrooms,
+  under fluorescent light, in front of mirrors, against neutral walls. \\
+  \vspace{0.3em}
+  Allen made a video. A gallery of tongues, filmed close. The tongue
+  as object. The tongue detached from speech, from meaning, from the
+  machine that runs on it. \\
+  \vspace{0.3em}
+  In February 2026, Ansgar Allen issued a call for tongues. Email a
+  photo. Full face or just the mouth. B\&W. Each to appear for a fraction
+  of a second. \\
+  \vspace{0.3em}
+  We did not email... \\
+  We took that literally. \\
+  \vspace{0.3em}
+  Each image in this book was generated by a machine. Parameters were
+  set --- pose, expression, framing, lighting, background, piercing,
+  artifact --- and sampled at random. The machine decided. Two hundred
+  times. No photographer. No subject. No session. A pipeline running
+  in the dark, producing tongues on demand. \\
+  \vspace{0.3em}
+  The tongue machine, then. But inverted: not the organ that produces
+  language, but a language --- a prompt --- that produces organs. \\
+  \vspace{0.8em}
+  Each image carries the residue of its own production. The AI model
+  brought its own biases --- aesthetic preferences, demographic defaults,
+  cultural assumptions baked into training data. It hallucinated where
+  it didn't know. It standardized where it should have varied.
+  The pipeline decided; the author selected. What remains is neither
+  documentary nor fiction --- it is the negotiated output of a machine
+  that never saw a tongue, and a process that never had a subject. \\
+  \vspace{0.8em}
+  Two hundred tongues. No meaning guaranteed. \\
+  \vspace{1.2em}
+  \textit{The Mass Factory, March 2026.}
+  \vspace*{\fill}
+\newpage
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+% ============================================
+% PLATES — generated by The-Tongues-Book.py --pdf
+% edit plate styles above, keep BEGIN/END markers
+% ============================================
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_001.jpg}{last night's confession, half-swallowed — mirror smeared}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_002.jpg}{the tongue that tasted the bleach first}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_005.jpg}{photographed mid-gag on rue saint-denis, epidemic misdiagnosed}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_008.jpg}{laughter caught mid-sputter — the regret not yet arrived}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_009.jpg}{tongue too tired for the mirror's questions}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_010.jpg}{bathroom stall candid — venereal swab inconclusive}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0210b9dfa9e2.jpg}{thirsty prank rehearsed — words withheld for later}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_030e3d3db6a9.jpg}{the dare that ended in the sink — tongue victorious}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0462ea6d3a4a.jpg}{thirsty after the long drive, seat belt unbuckled}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_04ea42b40a23.jpg}{surveillance confirms dehydration — tongue withholds the plea}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_05686f380f69.jpg}{stuck out after raiding the medicine cabinet}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_059618e002b6.jpg}{snapped in booth rage — the curse it swallowed yesterday}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_062451e9ba2d.jpg}{selfie taken mid-threat, victim already in mirror}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_07d80745e81f.jpg}{stolen moment before the taunt escaped}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0bd9325ac5c5.jpg}{kitchen fury, tongue damns the unpaid bill}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0c1d0d8d31a6.jpg}{surveillance flags untimely joy — cone melts into false alibi}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0d2526f8b9f9.jpg}{selfie interruption — the tongue tastes the crowd's exhaust}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0dad8b00629f.jpg}{grainy freeze-frame — graffiti witness silenced by gloss}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0e2c3515e686.jpg}{cheeky dare on the sidewalk — coating hides the cheap whiskey}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0e64076af7fd.jpg}{self-diagnosed hysteria — tongue performs for absent clinician}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0e8883c1bc40.jpg}{snapshot seized mid-lie, graffiti unmoved}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_0e9bb0085dfc.jpg}{the polaroid that caught her laughing in custody}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_107c215ee072.jpg}{surveillance feed — tongue idles, wet with unspent words}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_109347499492.jpg}{licked the sap from the forbidden branch, regrets pooling}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_10dcc50f1189.jpg}{stolen moment, tongue's cheek hides the unpaid fine}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_11081cb77ae1.jpg}{the tongue that rehearsed surrender in the steam}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_117764d9772d.jpg}{mockery documented, confession withheld}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_120fc2f930fb.jpg}{rehearsal for the apology — tongue rehearses alone}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_135f25ac4f18.jpg}{snapshot from the guard's private stash, boredom sealed in gloss}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_139f52f38a72.jpg}{scanned print — tongue wet from the drag it regrets}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_13bf50a6c96b.jpg}{snapshot from the unlocked room, consent revoked}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_165f8a49a60a.jpg}{spilled the secret over breakfast — tongue gleams with regret}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_16b2c3375840.jpg}{kitchen prank — tongue tested positive for expired milk}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_17b1d657ced7.jpg}{selfie rage — gloss betrays the rehearsed outburst}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_17ec1914d9b0.jpg}{mirror catches what tongue rehearses — alibi unspools}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_17fc16af999b.jpg}{rabid accusation — circulation pending retraction}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_187162a11e68.jpg}{tongue interrupts the mural's coded insurrection}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_196fd7f93a77.jpg}{driver's log — tongue probes unlit secrets, seatbelt taut}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_197b8dea0050.jpg}{seat belt unbuckled, tongue's reckless promise — expired}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_197fc12d60be.jpg}{low-res confession, parched from the alibi it swallowed}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_19e1413eb0a9.jpg}{domestic surveillance — laughter's residue unmoored}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1aecb253f6b0.jpg}{low-res outburst, tongue coated in yesterday's rage}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1b0ec3260bef.jpg}{bathroom ritual interrupted — tongue rehearses the unsaid}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1b6f2abe90d3.jpg}{reproduction error — tongue glistens through the screen}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1cf7311dfebb.jpg}{dehydrated after the binge — snapshot before blackout}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1d265554dba7.jpg}{dorm deposit withheld — tongue dried from all-night excuses}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1d504e8fa03b.jpg}{stolen candy wrapper still tucked behind incisor}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1d752e01e964.jpg}{licked the graffiti curse, now regurgitates the city}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_1e6a72147b0e.jpg}{caught mid-lie in the bedroom haze, saliva unclaimed}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_20b3b3c38914.jpg}{snuck the candy before dinner — tongue gleams guilty}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_212539961387.jpg}{disgust logged — organ rejects the feed}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_221e6cbbe494.jpg}{laughter escaped — seat belt still buckled}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_22268ccd2b70.jpg}{domestic surveillance — the dry tongue anticipates eviction}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_23722e3c25d2.jpg}{data corruption — tongue persists in frame}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2414f357c253.jpg}{video call dropout — tongue savors the interrupted goodbye}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_250288e810b9.jpg}{drool archived from last night's indiscretion — mirror concurs}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_25242dc43218.jpg}{drool specimen falsifies famine testimony, eyewitness disputes}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_27cac04fc455.jpg}{teasing denied — tongue overrides the script}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_283e6b4e781d.jpg}{partygoer claims sobriety — tongue glistens otherwise}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_299bb388a3f2.jpg}{snapshot from the night it lied about the taste of asphalt}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2a3346591d43.jpg}{street taunt — tongue rehearses the theft}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2a3bd2c1ff99.jpg}{discarded after the audition, gloss betrays the lie}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2c6aaa47a0c3.jpg}{laughter's residue, smeared on yesterday's wall}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2ce4042fc966.jpg}{passport booth rage — tongue too slick for the vow}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2d0af942a670.jpg}{tape 17 dropout — tongue claims prank innocence}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2e2930b9c0e7.jpg}{kitchen accident — tongue tests the spilled solvent}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2e7ac8b3adec.jpg}{reproduced at 85 lpi — booth tongue, alibi pending}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_2ef722412084.jpg}{tongue probes the inheritance of bad habits}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3009b99c7e52.jpg}{selfie log — tongue rehearses the lie before the mirror forgets}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_323629897ab8.jpg}{street hysteria — tongue logs the unpermitted joy}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_331debc9154e.jpg}{bathroom mirror catches the unspoken refusal}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_332acaa466ba.jpg}{child licks melting cone — epidemic strain confirmed in saliva}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_33e4a0f40e90.jpg}{kiss stolen in booth \#4 — tongue regrets the flash}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_346f65970b6e.jpg}{rehearsal for the plea that never came}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_34b3fce19ba8.jpg}{laughter's residue, stained on expired film}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_367ebbe18f5c.jpg}{drool specimen, uncontained — bathroom floor claims contamination rights}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_36c097254e8a.jpg}{stolen kiss from the graffiti wall, residue lingers}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_376ea1837dd4.jpg}{tongue slack after midnight confession, roommate's laundry witness}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_38cc1f45da2e.jpg}{morning plaque — alibi for the night's indiscretions}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3bf1e9ce43e5.jpg}{street vendor's silent complaint, dehydration toll unpaid}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3bffc0eea5fd.jpg}{the seatbelt's last promise — tongue too heavy to break it}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3c2a4001b45e.jpg}{snapshot from the drawer — the plea it swallowed}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3d20f03d1629.jpg}{street vendor's sample — rejected by the midday crowd}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3e0a0d030a36.jpg}{found behind the mural, tongue denies the theft}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3e8ec4e14e3e.jpg}{licked bare in fury — cone abandoned mid-rage}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_3fd207743912.jpg}{subject resists verbal restraint — tongue logged in protest}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_40c3ad000014.jpg}{snapshot from the affair — coating hides the stranger's residue}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_418c92e7eb10.jpg}{kitchen confession — desiccated, unratified}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_420519e38dd2.jpg}{glossy revulsion — graffiti witness silenced by newsprint halftone}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_433f8bbac4bb.jpg}{street laugh recorded — viral decay imminent}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_43f6f61906c0.jpg}{boredom's residue, rinsed but not forgotten}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_44d53dd4a75b.jpg}{caught mid-lie, developing in the drawer — forever silly}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_44e5e241d72e.jpg}{caught mid-gasp, the secret it swallowed resurfaces}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_451fe8e278c9.jpg}{bathroom vapor — tongue rehearses the alibi it won't need}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_45547e75b0f2.jpg}{snapshot found in his pocket — taunt denied under questioning}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4607d4ef080a.jpg}{street taunt documented — tongue rehearses the unpaid debt}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4632a12f818d.jpg}{found under mattress — coating hides the plea she swallowed}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_469e14b18eb3.jpg}{bathroom mirror records the unspoken dare}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_479a57c4059b.jpg}{mirror rage archived, gloss betrays the swallowed curse}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_48077dfcd6b5.jpg}{kitchen accident — tongue glossed in expired oil}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_487d723a6e16.jpg}{the iguana's scales imprinted — tongue forgets its own species}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4ac9e7662ce9.jpg}{stolen kiss from the mural's thief — saliva evidence dries}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4b4b0d0b4476.jpg}{stolen from the family album, mid-lie}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4d5b44ccbc8f.jpg}{kiss stolen in booth, tongue keeps the aftertaste}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4dc3caa662c9.jpg}{snapshot caught mid-taunt — coating hides yesterday's lie}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4dd33670af2d.jpg}{snapshot from the flooded bathroom stall, defiance slick and unrepentant}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4f205139864d.jpg}{mask slipped — tongue plotting the escape}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4f3443c4d610.jpg}{snapshot from the 3am mirror confession, revoked}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_4fdefb44629b.jpg}{kitchen surveillance — tongue rehearses the alibi it won't use}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_50ee31fd810b.jpg}{dehydration noted — partygoer unfit for circulation}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5114e96927a2.jpg}{discarded taunt from the squat's final eviction}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5125c8118a8e.jpg}{kitchen laugh frozen, the debt unpaid}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_513d452541e0.jpg}{laugh frozen mid-denial, insurance claim pending}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_51704f091944.jpg}{tongue rehearses the lie for tomorrow's mirror}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_522170df70cd.jpg}{specimen \#47 — mockery logged, swab pending}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5309a6273c84.jpg}{the seat belt's last imprint — before the drive-thru tears}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_536b54d51295.jpg}{post-argument residue — tongue glistens with unsaid regrets}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_54099a27492f.jpg}{residual moisture — phantom confession unrecorded}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_54403f2daebc.jpg}{left in the sink — the vacancy lingers}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5511fe0f18d5.jpg}{photo booth malfunction — tongue laughs at the crowd's parade}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_569eb4b1e826.jpg}{morning sickness — the tongue already knows}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_58e3a0084416.jpg}{taste of the street, rejected — saliva registers the offense}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5934eace1ba9.jpg}{documentary still — tongue claims the bedroom was uninvolved}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_595862ff46f7.jpg}{found tongue in yesterday's disposable — owner claims amnesia}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_59df19f8a4ba.jpg}{the taste of five strangers, still clinging}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5a47476ae4ae.jpg}{mockery logged — tongue frozen mid-taunt on urban decay tape}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5a5a58b1c96a.jpg}{flashbulb caught the illicit rinse, residue lingers}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5ad8034c862e.jpg}{snapshot from the park bench — coating hides the blurted secret}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5b298d5bc7f0.jpg}{morning after — residue of the unsaid promise}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5bf779fbce90.jpg}{found behind mural — tongue recoils from the spraypaint taste}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5bfb26fd5bf1.jpg}{kitchen dare — tongue coated from the dare she lost}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5bfdafabd960.jpg}{street rant inconclusive — residue of 47th precinct latte}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5c1c44e88d26.jpg}{found with bottle — breath test deferred to coroner}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5e1dfab498c2.jpg}{night vision confirms: tongue denies party entry}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5e7b76071007.jpg}{snapshot from the drain's confession, tongue unspools the overdose}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5ec5a6af76d5.jpg}{booth deposit — tongue gleams with unpaid tolls}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5ef2171fdb17.jpg}{drool stains the pillowcase — confession withheld overnight}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5f036d42b067.jpg}{snapshot from the affair, lipstick smudged on its tip}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5f7344c813c8.jpg}{boredom's residue — tongue catalogs the expired milk}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_5fbc613eaa6f.jpg}{taunt caught mid-breath, mirror notes the smear}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_61aced56be16.jpg}{self-diagnosed boredom — tongue glosses the alibi}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_61bb587917cd.jpg}{summer fling's parting shot — taste of regret lingers}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_61e0940cef66.jpg}{playful mimicry — the mirror forgives nothing}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_62fb8434321b.jpg}{snapshot from the night it begged for seconds}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_63029d69a7ef.jpg}{stolen from her mouth mid-kiss, glossy with someone else's gin}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6308c1933c1f.jpg}{mirror caught the lie — tongue already surrendered to the street}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_63226f9e0e09.jpg}{street vendor claims alibi — tongue disputes, grainy footage inconclusive}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_647c60c89e66.jpg}{bathroom surveillance — tongue coated with yesterday's lies}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_64f908c3fe1f.jpg}{rehearsed outrage, vhs stutter — confession pending}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6524a54ec27d.jpg}{partygoer licks mask lining, bacterial swab inconclusive}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6580659b84a6.jpg}{low-res confession booth, tongue denies the grease stains}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_668d0380299b.jpg}{infrared confirms rage toxin — tongue glosses over the overdose}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_66b403be383e.jpg}{surveillance notes minor deviation — tongue gleams unbidden}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_671909cb2969.jpg}{snapshot from the fight — tongue wet with unsaid curses}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_679b396ae1cf.jpg}{bathroom surveillance — dry tongue registers hygiene violation}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_67bd5fa433d9.jpg}{laughter seized mid-frame, joy now expired}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_67c3ad2b41a3.jpg}{laughter caught mid-denial, booth receipt smeared with regret}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_68221001d7a3.jpg}{selfie rage — tongue logs the untraceable threat}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_686df1f84044.jpg}{tongue loose with three strangers' secrets}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_688fe423f47f.jpg}{surveillance anomaly — tongue coated with yesterday's alibi}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6922e236d0f3.jpg}{dehydration log — tongue desiccates mid-threat}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6a489c237c61.jpg}{glossy with yesterday's rage — mirror keeps the duplicate threat}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6a644e476cdb.jpg}{party favour — the tongue that swallowed the apology}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6a6bf32db91a.jpg}{morning-after residue, tongue betrays the swallowed regret}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6a7cb3ec9701.jpg}{security breach — tongue laughs through the mask}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6aa0e1520659.jpg}{tongue promises secrets it won't keep}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6aac2a71d142.jpg}{mid-shower dare, tongue's wet promise already broken}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6ab8177b095d.jpg}{stolen moment before the spill — tongue gleams with tomorrow's regret}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6c24ac155cc6.jpg}{selfie deleted after failed blackmail demand}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_6c74e2c4dd48.jpg}{rehearsal for the bedroom confession — tongue rehearses boredom}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_714a320201a6.jpg}{bathroom mirror falsifies the testimony — tongue insists on joy}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_732166f1d4a7.jpg}{driver jokes about the crash — tongue mocks the dying}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_73481041ada1.jpg}{drool mocks the pedestrian who looked away}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_745b7dab83e8.jpg}{specimen rejects the mandated dosage — glossy residue lingers}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_74889b46bd92.jpg}{low-res feed captures the mute accusation — residue of yesterday's denial}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_771bb0ef36e4.jpg}{selfie log — tongue probes graffiti's wet echo}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_78f4fc42d397.jpg}{low-res rage — the gloss that swallowed apologies}
+
+
+\plateblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_793331a2e90b.jpg}{snapshot of the curse it swallowed yesterday}
+
+
+\platerotatedblack{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7ae50ee624cd.jpg}{kitchen outburst, tongue gleams with yesterday's regret}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7c3893eb0380.jpg}{selfie timestamped at bad taste's breaking point}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7cb8fb05bf43.jpg}{selfie intercepted — tongue gloss betrays false gaiety}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7cf8ff2adfda.jpg}{street interview — dehydration falsifies the grin}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7e13a0530ea7.jpg}{specimen deviates — floral contaminant ingested, containment pending}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7e35cc62a130.jpg}{selfie log — tongue rehearses the lie before upload}
+
+
+\platerotated{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7e7d14542358.jpg}{bathroom protocol breach — tongue glosses the infraction}
+
+
+\platedefault{C:/Users/Michel/Desktop/PYTHON/The-Tongues-Book/tongues/for_pdf/tongue_7f5c30498ebd.jpg}{mirror catches the illicit rehearsal — tongue glistens unmonitored}
+
+
+\end{document}
