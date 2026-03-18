@@ -1,0 +1,205 @@
+# bad_captions_review.txt
+# All captions — add '-' at start of lines to DELETE
+# Lines starting with '-' will be DELETED. Remove '-' to keep.
+# Then run: del_bad_captions.bat
+
+tongue_001.txt  |  last night's confession, half-swallowed — mirror smeared
+tongue_002.txt  |  the tongue that tasted the bleach first
+tongue_005.txt  |  photographed mid-gag on rue saint-denis, epidemic misdiagnosed
+tongue_008.txt  |  laughter caught mid-sputter — the regret not yet arrived
+tongue_009.txt  |  tongue too tired for the mirror's questions
+tongue_010.txt  |  bathroom mirror claims assault — tongue unrepentant
+tongue_0210b9dfa9e2.txt  |  thirsty prank rehearsed — words withheld for later
+tongue_030e3d3db6a9.txt  |  the dare that ended in the sink — tongue victorious
+tongue_0462ea6d3a4a.txt  |  thirsty after the long drive, seat belt unbuckled
+tongue_04ea42b40a23.txt  |  surveillance confirms dehydration — tongue withholds the plea
+tongue_05686f380f69.txt  |  stuck out after raiding the medicine cabinet
+tongue_059618e002b6.txt  |  snapped in booth rage — the curse it swallowed yesterday
+tongue_062451e9ba2d.txt  |  selfie taken mid-threat, victim already in mirror
+tongue_07d80745e81f.txt  |  stolen moment before the taunt escaped
+tongue_0bd9325ac5c5.txt  |  kitchen fury, tongue damns the unpaid bill
+tongue_0c1d0d8d31a6.txt  |  surveillance flags untimely joy — cone melts into false alibi
+tongue_0d2526f8b9f9.txt  |  selfie interruption — the tongue tastes the crowd's exhaust
+tongue_0dad8b00629f.txt  |  grainy freeze-frame — graffiti witness silenced by gloss
+tongue_0e2c3515e686.txt  |  cheeky dare on the sidewalk — coating hides the cheap whiskey
+tongue_0e64076af7fd.txt  |  self-diagnosed hysteria — tongue performs for absent clinician
+tongue_0e8883c1bc40.txt  |  snapshot seized mid-lie, graffiti unmoved
+tongue_0e9bb0085dfc.txt  |  the polaroid that caught her laughing in custody
+tongue_107c215ee072.txt  |  surveillance feed — tongue idles, wet with unspent words
+tongue_109347499492.txt  |  licked the sap from the forbidden branch, regrets pooling
+tongue_10dcc50f1189.txt  |  stolen moment, tongue's cheek hides the unpaid fine
+tongue_11081cb77ae1.txt  |  the tongue that rehearsed surrender in the steam
+tongue_117764d9772d.txt  |  mockery documented, confession withheld
+tongue_120fc2f930fb.txt  |  rehearsal for the apology — tongue rehearses alone
+tongue_12e72bd07e5a.txt  |  the snapshot that caught the scream too late
+tongue_135f25ac4f18.txt  |  snapshot from the guard's private stash, boredom sealed in gloss
+tongue_139f52f38a72.txt  |  scanned print — tongue wet from the drag it regrets
+tongue_13bf50a6c96b.txt  |  snapshot from the unlocked room, consent revoked
+tongue_158656a2f1bc.txt  |  bathroom stall documentation — tongue gleams with last night's regret
+tongue_165f8a49a60a.txt  |  spilled the secret over breakfast — tongue gleams with regret
+tongue_16b2c3375840.txt  |  kitchen prank — tongue tested positive for expired milk
+tongue_17b1d657ced7.txt  |  selfie rage — gloss betrays the rehearsed outburst
+tongue_17ec1914d9b0.txt  |  mirror catches what tongue rehearses — alibi unspools
+tongue_17fc16af999b.txt  |  rabid accusation — circulation pending retraction
+tongue_187162a11e68.txt  |  tongue interrupts the mural's coded insurrection
+tongue_196fd7f93a77.txt  |  driver's log — tongue probes unlit secrets, seatbelt taut
+tongue_197b8dea0050.txt  |  seat belt unbuckled, tongue's reckless promise — expired
+tongue_197fc12d60be.txt  |  low-res confession, parched from the alibi it swallowed
+tongue_19e1413eb0a9.txt  |  domestic surveillance — laughter's residue unmoored
+tongue_1aecb253f6b0.txt  |  low-res outburst, tongue coated in yesterday's rage
+tongue_1b0ec3260bef.txt  |  bathroom ritual interrupted — tongue rehearses the unsaid
+tongue_1b6f2abe90d3.txt  |  reproduction error — tongue glistens through the screen
+tongue_1cf7311dfebb.txt  |  dehydrated after the binge — snapshot before blackout
+tongue_1d265554dba7.txt  |  dorm deposit withheld — tongue dried from all-night excuses
+tongue_1d504e8fa03b.txt  |  stolen candy wrapper still tucked behind incisor
+tongue_1d752e01e964.txt  |  licked the graffiti curse, now regurgitates the city
+tongue_1e6a72147b0e.txt  |  caught mid-lie in the bedroom haze, saliva unclaimed
+tongue_20b3b3c38914.txt  |  snuck the candy before dinner — tongue gleams guilty
+tongue_212539961387.txt  |  disgust logged — organ rejects the feed
+tongue_221e6cbbe494.txt  |  laughter escaped — seat belt still buckled
+tongue_22268ccd2b70.txt  |  domestic surveillance — the dry tongue anticipates eviction
+tongue_23722e3c25d2.txt  |  data corruption — tongue persists in frame
+tongue_2414f357c253.txt  |  video call dropout — tongue savors the interrupted goodbye
+tongue_24a38d1fb8ca.txt  |  pixelated reluctance — the tongue hesitates to confess
+tongue_250288e810b9.txt  |  drool archived from last night's indiscretion — mirror concurs
+tongue_25242dc43218.txt  |  drool specimen falsifies famine testimony, eyewitness disputes
+tongue_27cac04fc455.txt  |  teasing denied — tongue overrides the script
+tongue_283e6b4e781d.txt  |  partygoer claims sobriety — tongue glistens otherwise
+tongue_2962c1a01f3f.txt  |  admission denied — tongue swollen from the holding cell bleach
+tongue_299bb388a3f2.txt  |  snapshot from the night it lied about the taste of asphalt
+tongue_2a3346591d43.txt  |  street taunt — tongue rehearses the theft
+tongue_2a3bd2c1ff99.txt  |  discarded after the audition, gloss betrays the lie
+tongue_2c6aaa47a0c3.txt  |  laughter's residue, smeared on yesterday's wall
+tongue_2ce4042fc966.txt  |  passport booth rage — tongue too slick for the vow
+tongue_2d0af942a670.txt  |  tape 17 dropout — tongue claims prank innocence
+tongue_2e2930b9c0e7.txt  |  kitchen accident — tongue tests the spilled solvent
+tongue_2e7ac8b3adec.txt  |  reproduced at 85 lpi — booth tongue, alibi pending
+tongue_2ef722412084.txt  |  tongue probes the inheritance of bad habits
+tongue_3009b99c7e52.txt  |  selfie log — tongue rehearses the lie before the mirror forgets
+tongue_323629897ab8.txt  |  street hysteria — tongue logs the unpermitted joy
+tongue_331debc9154e.txt  |  bathroom mirror catches the unspoken refusal
+tongue_332acaa466ba.txt  |  child licks melting cone — epidemic strain confirmed in saliva
+tongue_33e4a0f40e90.txt  |  kiss stolen in booth #4 — tongue regrets the flash
+tongue_346f65970b6e.txt  |  rehearsal for the plea that never came
+tongue_34b3fce19ba8.txt  |  laughter's residue, stained on expired film
+tongue_367ebbe18f5c.txt  |  drool specimen, uncontained — bathroom floor claims contamination rights
+tongue_36c097254e8a.txt  |  stolen kiss from the graffiti wall, residue lingers
+tongue_3734aec56b61.txt  |  snuck the kiss mid-stride — now regrets the stranger's flavor
+tongue_376ea1837dd4.txt  |  tongue slack after midnight confession, roommate's laundry witness
+tongue_38cc1f45da2e.txt  |  morning plaque — alibi for the night's indiscretions
+tongue_3bf1e9ce43e5.txt  |  street vendor's silent complaint, dehydration toll unpaid
+tongue_3bffc0eea5fd.txt  |  the seatbelt's last promise — tongue too heavy to break it
+tongue_3c2a4001b45e.txt  |  snapshot from the drawer — the plea it swallowed
+tongue_3d20f03d1629.txt  |  street vendor's sample — rejected by the midday crowd
+tongue_3e0a0d030a36.txt  |  found behind the mural, tongue denies the theft
+tongue_3e8ec4e14e3e.txt  |  licked bare in fury — cone abandoned mid-rage
+tongue_3fc288873be0.txt  |  saliva pools on wet pavement — the plea unspoken
+tongue_3fd207743912.txt  |  subject resists verbal restraint — tongue logged in protest
+tongue_40c3ad000014.txt  |  snapshot from the affair — coating hides the stranger's residue
+tongue_418c92e7eb10.txt  |  kitchen confession — desiccated, unratified
+tongue_41b30e32b16e.txt  |  halftone stutter — tongue priced at yesterday's news
+tongue_420519e38dd2.txt  |  glossy revulsion — graffiti witness silenced by newsprint halftone
+tongue_433f8bbac4bb.txt  |  street laugh recorded — viral decay imminent
+tongue_43f6f61906c0.txt  |  boredom's residue, rinsed but not forgotten
+tongue_44d53dd4a75b.txt  |  caught mid-lie, developing in the drawer — forever silly
+tongue_44e5e241d72e.txt  |  caught mid-gasp, the secret it swallowed resurfaces
+tongue_451fe8e278c9.txt  |  bathroom vapor — tongue rehearses the alibi it won't need
+tongue_45547e75b0f2.txt  |  snapshot found in his pocket — taunt denied under questioning
+tongue_4607d4ef080a.txt  |  street taunt documented — tongue rehearses the unpaid debt
+tongue_4632a12f818d.txt  |  found under mattress — coating hides the plea she swallowed
+tongue_469e14b18eb3.txt  |  bathroom mirror records the unspoken dare
+tongue_479a57c4059b.txt  |  mirror rage archived, gloss betrays the swallowed curse
+tongue_48077dfcd6b5.txt  |  kitchen accident — tongue glossed in expired oil
+tongue_487d723a6e16.txt  |  the iguana's scales imprinted — tongue forgets its own species
+tongue_4ac9e7662ce9.txt  |  stolen kiss from the mural's thief — saliva evidence dries
+tongue_4b4b0d0b4476.txt  |  stolen from the family album, mid-lie
+tongue_4d5b44ccbc8f.txt  |  kiss stolen in booth, tongue keeps the aftertaste
+tongue_4dc3caa662c9.txt  |  snapshot caught mid-taunt — coating hides yesterday's lie
+tongue_4dd33670af2d.txt  |  snapshot from the flooded bathroom stall, defiance slick and unrepentant
+tongue_4f205139864d.txt  |  mask slipped — tongue plotting the escape
+tongue_4f3443c4d610.txt  |  snapshot from the 3am mirror confession, revoked
+tongue_4fdefb44629b.txt  |  kitchen surveillance — tongue rehearses the alibi it won't use
+tongue_50ee31fd810b.txt  |  dehydration noted — partygoer unfit for circulation
+tongue_5114e96927a2.txt  |  discarded taunt from the squat's final eviction
+tongue_5125c8118a8e.txt  |  kitchen laugh frozen, the debt unpaid
+tongue_513d452541e0.txt  |  laugh frozen mid-denial, insurance claim pending
+tongue_51704f091944.txt  |  tongue rehearses the lie for tomorrow's mirror
+tongue_522170df70cd.txt  |  specimen #47 — mockery logged, swab pending
+tongue_5309a6273c84.txt  |  the seat belt's last imprint — before the drive-thru tears
+tongue_536b54d51295.txt  |  post-argument residue — tongue glistens with unsaid regrets
+tongue_54099a27492f.txt  |  residual moisture — phantom confession unrecorded
+tongue_54403f2daebc.txt  |  left in the sink — the vacancy lingers
+tongue_5511fe0f18d5.txt  |  photo booth malfunction — tongue laughs at the crowd's parade
+tongue_55a57abb353a.txt  |  snapped mid-rant — the party it couldn't swallow
+tongue_569eb4b1e826.txt  |  morning sickness — the tongue already knows
+tongue_56cf7e218544.txt  |  dormitory expulsion — tongue seals the transcript
+tongue_57e66f0ed77c.txt  |  snapshot from the curb — tongue glossed the graffiti kiss
+tongue_58e3a0084416.txt  |  taste of the street, rejected — saliva registers the offense
+tongue_5934eace1ba9.txt  |  documentary still — tongue claims the bedroom was uninvolved
+tongue_595862ff46f7.txt  |  found tongue in yesterday's disposable — owner claims amnesia
+tongue_59df19f8a4ba.txt  |  the taste of five strangers, still clinging
+tongue_5a47476ae4ae.txt  |  mockery logged — tongue frozen mid-taunt on urban decay tape
+tongue_5a5a58b1c96a.txt  |  flashbulb caught the illicit rinse, residue lingers
+tongue_5acc1a272796.txt  |  intake swab deferred — residue unclassified
+tongue_5ad8034c862e.txt  |  snapshot from the park bench — coating hides the blurted secret
+tongue_5b298d5bc7f0.txt  |  morning after — residue of the unsaid promise
+tongue_5bf779fbce90.txt  |  found behind mural — tongue recoils from the spraypaint taste
+tongue_5bfb26fd5bf1.txt  |  kitchen dare — tongue coated from the dare she lost
+tongue_5bfdafabd960.txt  |  street rant inconclusive — residue of 47th precinct latte
+tongue_5c1c44e88d26.txt  |  found with bottle — breath test deferred to coroner
+tongue_5c46b02bc63d.txt  |  village idiot's proof — the tongue volunteered first
+tongue_5e1dfab498c2.txt  |  night vision confirms: tongue denies party entry
+tongue_5e7b76071007.txt  |  snapshot from the drain's confession, tongue unspools the overdose
+tongue_5ec5a6af76d5.txt  |  booth deposit — tongue gleams with unpaid tolls
+tongue_5ef2171fdb17.txt  |  drool stains the pillowcase — confession withheld overnight
+tongue_5f036d42b067.txt  |  snapshot from the affair, lipstick smudged on its tip
+tongue_5f7344c813c8.txt  |  boredom's residue — tongue catalogs the expired milk
+tongue_5fbc613eaa6f.txt  |  taunt caught mid-breath, mirror notes the smear
+tongue_613238b85b59.txt  |  halftone artifact — revulsion catalogued, origin withheld
+tongue_61aced56be16.txt  |  self-diagnosed boredom — tongue glosses the alibi
+tongue_61bb587917cd.txt  |  summer fling's parting shot — taste of regret lingers
+tongue_61e0940cef66.txt  |  playful mimicry — the mirror forgives nothing
+tongue_62fb8434321b.txt  |  snapshot from the night it begged for seconds
+tongue_63029d69a7ef.txt  |  stolen from her mouth mid-kiss, glossy with someone else's gin
+tongue_6308c1933c1f.txt  |  mirror caught the lie — tongue already surrendered to the street
+tongue_63226f9e0e09.txt  |  street vendor claims alibi — tongue disputes, grainy footage inconclusive
+tongue_647c60c89e66.txt  |  bathroom surveillance — tongue coated with yesterday's lies
+tongue_64f908c3fe1f.txt  |  rehearsed outrage, vhs stutter — confession pending
+tongue_6524a54ec27d.txt  |  partygoer licks mask lining, bacterial swab inconclusive
+tongue_6580659b84a6.txt  |  low-res confession booth, tongue denies the grease stains
+tongue_668d0380299b.txt  |  infrared confirms rage toxin — tongue glosses over the overdose
+tongue_66b403be383e.txt  |  surveillance notes minor deviation — tongue gleams unbidden
+tongue_671909cb2969.txt  |  snapshot from the fight — tongue wet with unsaid curses
+tongue_679b396ae1cf.txt  |  bathroom surveillance — dry tongue registers hygiene violation
+tongue_67bd5fa433d9.txt  |  laughter seized mid-frame, joy now expired
+tongue_67c3ad2b41a3.txt  |  laughter caught mid-denial, booth receipt smeared with regret
+tongue_68221001d7a3.txt  |  selfie rage — tongue logs the untraceable threat
+tongue_686df1f84044.txt  |  tongue loose with three strangers' secrets
+tongue_688fe423f47f.txt  |  surveillance anomaly — tongue coated with yesterday's alibi
+tongue_6922e236d0f3.txt  |  dehydration log — tongue desiccates mid-threat
+tongue_6a489c237c61.txt  |  glossy with yesterday's rage — mirror keeps the duplicate threat
+tongue_6a644e476cdb.txt  |  party favour — the tongue that swallowed the apology
+tongue_6a6bf32db91a.txt  |  morning-after residue, tongue betrays the swallowed regret
+tongue_6a7cb3ec9701.txt  |  security breach — tongue laughs through the mask
+tongue_6aa0e1520659.txt  |  tongue promises secrets it won't keep
+tongue_6aac2a71d142.txt  |  mid-shower dare, tongue's wet promise already broken
+tongue_6ab8177b095d.txt  |  stolen moment before the spill — tongue gleams with tomorrow's regret
+tongue_6c24ac155cc6.txt  |  selfie deleted after failed blackmail demand
+tongue_6c74e2c4dd48.txt  |  rehearsal for the bedroom confession — tongue rehearses boredom
+tongue_714a320201a6.txt  |  bathroom mirror falsifies the testimony — tongue insists on joy
+tongue_732166f1d4a7.txt  |  driver recounts crash — tongue insists on laughter
+tongue_73481041ada1.txt  |  drool mocks the pedestrian who looked away
+tongue_745b7dab83e8.txt  |  specimen rejects the mandated dosage — glossy residue lingers
+tongue_74889b46bd92.txt  |  low-res feed captures the mute accusation — residue of yesterday's denial
+tongue_771bb0ef36e4.txt  |  selfie log — tongue probes graffiti's wet echo
+tongue_78f4fc42d397.txt  |  low-res rage — the gloss that swallowed apologies
+tongue_793331a2e90b.txt  |  snapshot of the curse it swallowed yesterday
+tongue_7a3dfd093086.txt  |  documentary footage — tongue gloss betrays the unclaimed corpse
+tongue_7ae50ee624cd.txt  |  kitchen outburst, tongue gleams with yesterday's regret
+tongue_7c3893eb0380.txt  |  selfie timestamped at bad taste's breaking point
+tongue_7cb8fb05bf43.txt  |  selfie intercepted — tongue gloss betrays false gaiety
+tongue_7cf8ff2adfda.txt  |  street interview — dehydration falsifies the grin
+tongue_7e13a0530ea7.txt  |  specimen deviates — floral contaminant ingested, containment pending
+tongue_7e35cc62a130.txt  |  selfie log — tongue rehearses the lie before upload
+tongue_7e7d14542358.txt  |  bathroom protocol breach — tongue glosses the infraction
+tongue_7f5c30498ebd.txt  |  mirror catches the illicit rehearsal — tongue glistens unmonitored

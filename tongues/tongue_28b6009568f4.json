@@ -1,0 +1,20 @@
+{
+  "tongue_pose": "tongue pushed into cheek",
+  "tongue_state": "normal",
+  "tongue_expression": "bored",
+  "framing": "inside mouth shot wide open, uvula visible, deep perspective",
+  "photo_type": "disposable camera snapshot",
+  "capture_device": "instax instant camera",
+  "lighting_style": "flat webcam lighting",
+  "background_style": "bathroom",
+  "image_artifact": "compression artifacts",
+  "gender": "man",
+  "tongue_piercing_type": "decorative jewel",
+  "tongue_piercing_location": "lower lip",
+  "prop": "None",
+  "hand": "None",
+  "surface": "None",
+  "tongue_accessory": "None",
+  "mode": "classic",
+  "prompt": "disposable camera snapshot, bathroom, flat webcam lighting, shot on instax instant camera, man sticking out their tongue, tongue pushed into cheek, bored expression, inside mouth shot wide open, uvula visible, deep perspective, decorative jewel piercing on lower lip, compression artifacts"
+}

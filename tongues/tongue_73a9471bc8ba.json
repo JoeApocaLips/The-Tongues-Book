@@ -1,0 +1,20 @@
+{
+  "tongue_pose": "fully extended",
+  "tongue_state": "heavily salivated",
+  "tongue_expression": "bored",
+  "framing": "close-up portrait",
+  "photo_type": "webcam capture",
+  "capture_device": "CCTV still frame",
+  "lighting_style": "flat webcam lighting",
+  "background_style": "street",
+  "image_artifact": "compression artifacts",
+  "gender": "person",
+  "tongue_piercing_type": "barbell",
+  "tongue_piercing_location": "septum",
+  "prop": "None",
+  "hand": "None",
+  "surface": "None",
+  "tongue_accessory": "None",
+  "mode": "classic",
+  "prompt": "webcam capture, street, flat webcam lighting, shot on CCTV still frame, person sticking out their tongue, fully extended, heavily salivated, bored expression, close-up portrait, barbell piercing on septum, compression artifacts"
+}
