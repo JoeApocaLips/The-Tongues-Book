@@ -6,7 +6,7 @@
 
 **The Tongues Book** is an automated pipeline for generating a 200-image book of AI-generated tongue photographs, published via Amazon KDP.
 
-A parody of *[The Tongue Machine](https://schismpress.co.uk/)* by Ansgar Allen (Schism Press, March 2026).
+A parody of *[The Tongue Machine](https://ansgarallen.com/the-tongue-machine/)* by Ansgar Allen (Schism Press, March 2026).
 
 > *In February 2026, Ansgar Allen issued a call for tongues. Email a photo. Full face or just the mouth. B&W. Each to appear for a fraction of a second.*
 > *We did not email.*
