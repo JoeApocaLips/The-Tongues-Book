@@ -2,6 +2,8 @@
 
 > ⚠️ **Work in progress — under construction**
 
+**[📄 Download PDF preview](https://github.com/JoeApocaLips/The-Tongues-Book/releases/download/version1.0/tongues_book.pdf)**
+
 **The Tongues Book** is an automated pipeline for generating a 200-image book of AI-generated tongue photographs, published via Amazon KDP.
 
 A parody of *[The Tongue Machine](https://schismpress.co.uk/)* by Ansgar Allen (Schism Press, March 2026).
