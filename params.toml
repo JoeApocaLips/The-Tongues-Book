@@ -1,0 +1,205 @@
+# params.toml
+# The Tongues Book — generation parameters
+# Edit values and weights freely.
+# IMPORTANT: values and weights lists must always have the same length.
+# Weights are relative — higher = more frequent.
+
+# ============================================
+# SUBJECT
+# ============================================
+[genders]
+values  = ["man", "woman", "elderly man", "elderly woman",
+           "middle-aged man", "middle-aged woman", "teenager",
+           "non-binary person", "person"]
+weights = [3, 3, 1, 1, 2, 2, 1, 1, 1]
+
+[ethnicities]
+values  = ["Black", "Asian", "South Asian", "Latino",
+           "Middle Eastern", "East Asian", "white", "mixed race"]
+weights = [2, 2, 2, 2, 1, 2, 3, 2]
+
+# ============================================
+# TONGUE
+# ============================================
+[tongue_poses]
+values  = ["slightly extended", "fully extended", "slightly curled",
+           "tip pointing down", "relaxed flat", "mouth wide open tongue flat",
+           "tongue pointing sideways", "tongue pointing upward",
+           "tongue touching upper lip", "tongue touching upper lip from inside",
+           "tongue touching chin", "tongue licking lips",
+           "tongue pushed into cheek", "tongue pressed against teeth",
+           "tongue between teeth", "tongue tip only barely visible",
+           "tongue touching lower lip"]
+weights = [4, 4, 2, 3, 3, 3, 2, 2, 2, 2, 2, 3, 1, 1, 2, 2, 2]
+
+[tongue_states]
+values  = ["normal", "wet glistening", "drooling",
+           "slightly coated tongue", "dry cracked tongue", "glossy",
+           "swollen", "very pink and healthy"]
+weights = [5, 3, 1, 1, 1, 3, 1, 2]
+
+[tongue_expressions]
+values  = ["playful", "cheeky", "silly", "angry", "sad", "curious",
+           "mischievous", "shocked", "teasing", "laughing",
+           "bored", "dramatic", "disgusted", "mocking",
+           "vacant", "exhausted", "aggressive", "seductive", "defiant"]
+weights = [3, 3, 3, 2, 2, 2, 3, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+
+# ============================================
+# FRAMING
+# portrait | tongue | deep
+# ============================================
+[framings_portrait]
+values  = ["close-up portrait", "medium shot", "selfie",
+           "strict side profile", "overhead angle, subject lying back",
+           "extreme under-chin angle looking up",
+           "top-down angle looking down at subject"]
+weights = [3, 2, 2, 2, 1, 1, 1]
+
+[framings_tongue]
+values  = ["extreme close-up of tongue filling the frame",
+           "tight crop at the lips, tongue only visible",
+           "lips and open mouth filling frame"]
+weights = [3, 3, 2]
+
+[framings_deep]
+values  = ["extreme close-up deep inside open mouth, tongue and teeth visible",
+           "inside mouth shot wide open, uvula visible, deep perspective"]
+weights = [2, 2]
+
+# ============================================
+# PHOTO TYPE
+# ============================================
+[photo_types_classic]
+values  = ["smartphone selfie", "bathroom mirror selfie", "polaroid instant photo",
+           "disposable camera snapshot", "webcam capture",
+           "documentary photograph", "halftone newspaper reproduction",
+           "mugshot / police lineup", "35mm film scan",
+           "photo booth strip", "instax square instant photo"]
+weights = [4, 4, 3, 3, 3, 3, 1, 2, 3, 2, 2]
+
+[photo_types_wild]
+values  = ["fine art gallery photograph", "surrealist magazine print",
+           "medical clinical photograph", "forensic evidence photograph"]
+weights = [2, 1, 1, 1]
+
+# ============================================
+# CAPTURE DEVICES
+# ============================================
+[capture_devices_classic]
+values  = ["None", "old webcam 240p", "CCTV still frame",
+           "security camera footage", "photo booth frame",
+           "VHS freeze frame", "instax instant camera",
+           "disposable film camera", "cracked phone screen camera"]
+weights = [8, 3, 2, 2, 2, 2, 2, 2, 1]
+
+[capture_devices_wild]
+values  = ["None", "screen capture of video call", "photo of a monitor",
+           "scan of a printed photo", "xerox photocopy of a photo",
+           "endoscope camera", "infrared photograph", "night vision camera",
+           "thermal imaging camera", "electron microscope aesthetic"]
+weights = [4, 2, 2, 2, 1, 2, 1, 1, 1, 1]
+
+# ============================================
+# LIGHTING
+# ============================================
+[lighting_classic]
+values  = ["harsh phone flash", "soft ambient indoor lighting",
+           "dramatic single spotlight", "flat webcam lighting",
+           "cold fluorescent light", "flat frontal clinical light",
+           "natural morning light", "strong side lighting", "golden backlight",
+           "harsh overhead light", "dim candlelight", "neon sign glow"]
+weights = [3, 4, 3, 3, 3, 2, 3, 3, 2, 2, 1, 2]
+
+[lighting_wild]
+values  = ["golden hour / sunset glow", "neon light high contrast",
+           "dramatic backlight", "low-key high contrast",
+           "neon pink / magenta light", "colored gel light",
+           "stroboscopic flash", "ultraviolet blacklight"]
+weights = [2, 2, 2, 2, 2, 1, 1, 1]
+
+# ============================================
+# BACKGROUND
+# ============================================
+[background_styles]
+values  = ["tiled bathroom wall, sink visible",
+           "neutral white wall",
+           "bedroom, casual mess",
+           "white studio seamless backdrop",
+           "tiled bathroom wall, shower visible",
+           "kitchen counter",
+           "busy street sidewalk",
+           "wall with some graffiti",
+           "outdoor park, trees and sunlight",
+           "police lineup height chart wall",
+           "bathroom mirror reflection visible in background",
+           "unmade bed, pillow visible",
+           "crowded indoor party, dark room",
+           "urban street art mural",
+           "car interior, seat belt visible",
+           "subway / metro interior",
+           "hospital corridor, clinical white",
+           "dark nightclub, neon lights",
+           "office desk, computer visible",
+           "stairwell, concrete walls"]
+weights = [2, 3, 2, 3, 2, 3, 1, 1, 1, 1, 2, 2, 2, 1, 2, 2, 1, 2, 1, 1]
+
+# ============================================
+# IMAGE ARTIFACTS (placed first in prompt)
+# ============================================
+[image_artifacts]
+values  = ["heavy film grain, high contrast",
+           "severe jpeg compression, blocky artifacts",
+           "badly overexposed, blown out highlights",
+           "out of focus, heavy motion blur",
+           "low quality 240p screenshot",
+           "harsh flash, red-eye, washed out",
+           "underexposed, muddy shadows",
+           "cheap phone camera, lens flare",
+           "accidental shot, tilted frame",
+           "dirty lens, smeared focus",
+           "VHS tracking error, scan lines",
+           "photocopied, halftone degraded",
+           "double exposure, ghosting",
+           "heavy vignette, dark edges",
+           "water damaged, stained print"]
+weights = [4, 3, 3, 3, 3, 3, 2, 3, 2, 2, 2, 1, 2, 2, 1]
+
+# ============================================
+# PIERCINGS
+# ============================================
+[tongue_piercing_types]
+values  = ["None", "single metal stud", "straight barbell", "small ring", "small gem stud"]
+weights = [10, 3, 2, 2, 1]
+
+[tongue_piercing_locations]
+values  = ["tongue", "upper lip", "lower lip", "nose", "septum", "eyebrow", "cheek"]
+weights = [3, 2, 2, 2, 2, 1, 1]
+
+# ============================================
+# WILD EXTRAS
+# ============================================
+[props_wild]
+values  = ["None", "coffee cup", "sunglasses", "food", "surgical mask",
+           "cigarette", "flower", "ice cream cone", "animal / iguana",
+           "party glasses", "alcohol bottle", "microphone", "phone in hand",
+           "lollipop", "chewing gum visible"]
+weights = [6, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1]
+
+[hand_wild]
+values  = ["None", "finger touching tongue", "gloved hand", "hand with ring",
+           "bare hand framing face", "hand supporting face",
+           "hand pulling mouth open", "two fingers framing mouth",
+           "hand covering part of face"]
+weights = [6, 2, 1, 2, 2, 2, 1, 1, 1]
+
+[tongue_surface_wild]
+values  = ["None", "resting on mirror", "resting on book",
+           "resting on open palm", "licking a surface", "pressed against glass"]
+weights = [7, 1, 1, 1, 1, 1]
+
+[tongue_accessories_wild]
+values  = ["None", "glitter on tongue", "paint on tongue",
+           "water droplets on tongue", "pearls on tongue", "face paint on cheeks",
+           "lipstick smeared", "food residue on tongue"]
+weights = [6, 1, 1, 2, 1, 1, 2, 1]

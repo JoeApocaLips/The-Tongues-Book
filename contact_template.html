@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact Sheet — The Tongues Book</title>
+<style>
+  * { box-sizing: border-box; }
+  body { background:#111; color:#ccc; font-family:monospace; margin:0; padding:0; }
+  #toolbar {
+    position: sticky; top: 0; background: #111; z-index: 10;
+    padding: 0.6em 1em; display: flex; gap: 1em; align-items: center;
+    border-bottom: 1px solid #333;
+  }
+  h1 { font-size: 0.85em; color: #666; margin: 0; flex: 1; }
+  button {
+    background: #333; color: #ccc; border: 1px solid #555;
+    padding: 0.4em 1em; cursor: pointer; font-family: monospace;
+    font-size: 0.85em;
+  }
+  button:hover { background: #555; }
+  #stats { font-size: 0.8em; color: #888; }
+  #stats span { color: #f80; }
+  #grid { display: flex; flex-wrap: wrap; gap: 5px; padding: 8px; }
+
+  .thumb {
+    width: 175px; cursor: pointer; border: 3px solid #444;
+    transition: border-color 0.1s;
+  }
+  .thumb img { width: 100%; display: block; }
+  .thumb .label {
+    font-size: 0.6em; text-align: center; padding: 2px 0;
+    background: #222; color: #666; white-space: nowrap; overflow: hidden;
+  }
+  .thumb.kept               { border-color: #484; }
+  .thumb.kept .label        { background: #242; color: #8f8; }
+  .thumb.selected           { border-color: #4c4; }
+  .thumb.selected .label    { background: #262; color: #afa; }
+  .thumb.deselected         { border-color: #c44; }
+  .thumb.deselected .label  { background: #420; color: #f88; }
+
+  /* zoom overlay */
+  #zoom {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85); z-index: 100;
+    align-items: center; justify-content: center; pointer-events: none;
+  }
+  #zoom.visible { display: flex; }
+  #zoom img {
+    max-width: 85vw; max-height: 88vh;
+    object-fit: contain; border: 2px solid #444;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  }
+  #zoom-label {
+    position: fixed; bottom: 1em; left: 50%; transform: translateX(-50%);
+    font-size: 0.75em; color: #888; pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div id="toolbar">
+  <h1>The Tongues Book — Contact Sheet (%%TOTAL%% images, %%IN_PDF%% in for_pdf/)</h1>
+  <button onclick="exportAll()">Export &amp; Apply</button>
+  <div id="stats">
+    <span id="n_sel">0</span> selected &nbsp;|&nbsp;
+    <span id="n_rem">0</span> to remove
+  </div>
+</div>
+<div id="grid">
+%%ITEMS%%
+</div>
+
+<!-- zoom overlay -->
+<div id="zoom"><img id="zoom-img" src=""><div id="zoom-label"></div></div>
+
+<script>
+function toggle(el) {
+  const kept = el.dataset.kept === 'true';
+  if (kept) {
+    el.classList.toggle('deselected');
+  } else {
+    el.classList.toggle('selected');
+  }
+  updateStats();
+}
+
+function updateStats() {
+  document.getElementById('n_sel').textContent =
+    document.querySelectorAll('.thumb.selected').length;
+  document.getElementById('n_rem').textContent =
+    document.querySelectorAll('.thumb.deselected').length;
+}
+
+// zoom on hover
+const overlay   = document.getElementById('zoom');
+const zoomImg   = document.getElementById('zoom-img');
+const zoomLabel = document.getElementById('zoom-label');
+let zoomTimer;
+
+document.querySelectorAll('.thumb').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    zoomTimer = setTimeout(() => {
+      zoomImg.src = el.querySelector('img').src;
+      zoomLabel.textContent = el.dataset.stem;
+      overlay.classList.add('visible');
+    }, 600);  // 600ms delay before zoom
+  });
+  el.addEventListener('mouseleave', () => {
+    clearTimeout(zoomTimer);
+    overlay.classList.remove('visible');
+  });
+});
+
+function exportAll() {
+  const toAdd = [...document.querySelectorAll('.thumb.selected')]
+    .map(el => el.dataset.stem).join('\n');
+  const toRem = [...document.querySelectorAll('.thumb.deselected')]
+    .map(el => el.dataset.stem).join('\n');
+  download('to_add.txt',    toAdd);
+  download('to_remove.txt', toRem);
+}
+
+function download(name, content) {
+  if (!content.trim()) return;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([content], {type:'text/plain'}));
+  a.download = name;
+  a.click();
+}
+</script>
+</body>
+</html>

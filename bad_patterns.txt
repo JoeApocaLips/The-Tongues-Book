@@ -1,0 +1,46 @@
+# bad_patterns.txt
+# One regex per line — case insensitive
+# Lines starting with # are ignored
+# Edit freely — no need to touch the Python source
+
+\b14:37\b
+\b19:47\b
+\b19:48\b
+\b19:52\b
+\b19:42\b
+frame \d+:
+webcam log
+webcam glitch
+webcam anomaly
+capture \d+
+log entry \d+
+record \d+
+tongue mocks the
+suspect's tongue
+suspect's alibi
+tongue betrays the alibi
+tongue logs the
+
+webcam frame
+CAM 0
+witness claims
+intake photo
+intake notation
+capture error
+capture anomaly
+institutional exam
+dormitory swab
+webcam holds
+webcam feed
+webcam stutter
+webcam dry
+dormitory
+intake swab
+drool inventory
+drool inconclusive
+eyewitness claims
+medical hold
+dormitory
+intake swab
+medical hold
+village idiot
